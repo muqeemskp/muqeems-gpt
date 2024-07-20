@@ -1,0 +1,152 @@
+
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(90, 210, 188, 0.2);
+    padding: 25px 15px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    width: 60px;
+    max-width: 200px;
+    backdrop-filter: blur(5px);
+    transition: width 0.3s ease;
+    overflow: hidden; 
+}
+
+.sidebar.extended {
+    width: 250px; 
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+/* .sidebar.extended is the part of sidebar, here in transition, opacity will come from extended class and will complete transitioin 0.3s*/
+
+.new-chat:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar.extended .new-chat {
+    opacity: 1; 
+}
+
+/* Recent Section */
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.extended .recent {
+    opacity: 1;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.extended .recent-entry {
+    opacity: 1;
+}
+
+/* Bottom Items */
+.sidebar .bottom-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.extended .bottom-item {
+    opacity: 1;
+}
+
+.sidebar i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.recent-entry:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .sidebar.extended {
+        width: 200px;
+    }
+
+    .sidebar .new-chat, .sidebar .recent, .sidebar .recent-entry, .sidebar .bottom-item {
+        font-size: 12px;
+    }
+
+    .sidebar i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 40px;
+    }
+
+    .sidebar.extended {
+        width: 150px;
+    }
+
+    .sidebar .new-chat, .sidebar .recent, .sidebar .recent-entry, .sidebar .bottom-item {
+        font-size: 10px;
+    }
+
+    .sidebar i {
+        font-size: 16px;
+    }
+}

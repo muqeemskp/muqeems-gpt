@@ -1,0 +1,12 @@
+.container {
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(90, 210, 188, 0.5), rgba(255, 255, 255, 0.2)), url('./assets/robo3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+  }
+  
+  
